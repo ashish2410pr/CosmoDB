@@ -1,30 +1,36 @@
 Used  DiagramGPT – AI diagram generator for Architecture diagram:
- ![Architecture Diagram](./Architecture_diagram.jpg)
+ ![Architecture Diagram]([./Architecture_diagram.jpg](https://github.com/ashish2410pr/CosmoDB/blob/main/Architecture_diagram.png))
 
 AI model used: ChatGPT
 Prompt:
+
 Create an Azure-based billing records archival system with the following requirements:
+
 Core Functionality:
 •	Automatically archive billing records from Cosmos DB to Blob Storage when they're older than 90 days
 •	Use Azure Functions with Cosmos DB Change Feed trigger for real-time archival
 •	Organize archived files in blob storage as: billing/YYYY/MM/record-id.json
 •	Create an intelligent API that searches both active Cosmos DB and archived blob storage
+
 Technical Stack:
 •	Azure Functions (Python) for serverless processing
 •	Cosmos DB for hot data storage
 •	Azure Blob Storage for cold data archival
 •	Terraform for infrastructure as code
+
 Deliverables:
 1.	Azure Function code with Change Feed trigger
 2.	Terraform configuration for blob storage setup
 3.	Enhanced API with fallback logic for record retrieval
 4.	Comprehensive documentation and setup instructions
 5.	Environment configuration examples
+   
 Additional Features:
 •	Hierarchical storage organization by year/month
 •	Optional cleanup of archived records from Cosmos DB
 •	Proper connection string management
 •	Infrastructure outputs for easy integration
+
 Make the solution production-ready with proper error handling, monitoring capabilities, and security best practices.
 After getting all these then refine and rephrase the content as per required.
 
