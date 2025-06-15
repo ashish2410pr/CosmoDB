@@ -2,7 +2,7 @@ Used  DiagramGPT – AI diagram generator for Architecture diagram:
  ![Architecture Diagram](https://github.com/ashish2410pr/CosmoDB/blob/main/Architecture_diagram.png)
 
 AI model used: ChatGPT
-------------
+
 Prompt:
 ------------
 Create an Azure-based billing records archival system with the following requirements:
