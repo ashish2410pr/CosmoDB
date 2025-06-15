@@ -38,23 +38,23 @@ After getting all these then refine and rephrase the content as per required.
 
 
 Implementation of requirement
-________________________________________
+------------------------------
+
 1. Trigger/ Azure function(Azure_function_init.py)
 •	This trigger continuously monitors the records in Cosmos DB and identifies those older than 90 days.
-________________________________________
-3. Archiving Data to Blob Storage
+• Archiving Data to Blob Storage
 •	When the trigger detects records exceeding the 90-day threshold, it initiates the archival process.
 •	The identified records are extracted from Cosmos DB and moved to Azure Blob Storage, which is more cost-effective for storing large volumes of rarely accessed data.
-________________________________________
-4. Organizing Data in the Data Lake
+
+2. Organizing Data in the Data Lake 
 •	Within Blob Storage, the archived records are saved as CSV or JSON files.
 •	Files are systematically organized into folders by year and month, making it easy to locate and retrieve historical data as needed.
-________________________________________
-5. Data Retrieval(client_api_update.py)
+
+3. Data Retrieval(client_api_update.py)
 •	When a record is requested, the system first checks Cosmos DB for recent data.
 •	If the record is not found (because it’s older than 90 days), the system automatically looks for it in Blob Storage, retrieving it from the appropriate CSV/JSON file.
-________________________________________
-6. Infrastructure Setup(setup_Blobstorage.tf)
+
+4. Infrastructure Setup(setup_Blobstorage.tf)
 •	Azure resources such as Cosmos DB, Blob Storage, and Function Apps are provisioned, often using Infrastructure as Code tools like Terraform for repeatability and automation.
 •	Proper access controls and environment configurations are set to ensure secure and reliable operations.
 
